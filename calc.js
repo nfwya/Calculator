@@ -29,6 +29,23 @@ const reset = function(){
     newDisplay = false;
 }
 
+const backspace = function(){
+    const display = document.querySelector('.current-number');
+    const currentNumber = display.textContent;
+    let newNumber;
+    if(currentNumber !== ''){
+        if(currentNumber.slice(-2,-1) === '.'){
+            newNumber = currentNumber.slice(0,-2);
+            document.querySelector('.current-number').classList.remove('has-decimal');
+        }
+        else{
+            newNumber = currentNumber.slice(0,-1);
+        }
+        console.log(newNumber);
+        display.textContent = newNumber;
+    }
+}
+
 const clickHandler = function(){
     const currentNumber = document.querySelector('.current-number').textContent;
     const operator = document.querySelector('.current-operator');
@@ -68,6 +85,9 @@ const clickHandler = function(){
         display.textContent = newNumber;
         bufferNumber = undefined;
         operator.textContent = '';
+    }
+    else if(this.classList.contains('back')){
+        backspace();
     }
     else if(this.classList.contains('ac')){
         reset();
