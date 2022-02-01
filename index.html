@@ -6,14 +6,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calculator</title>
     <link rel="stylesheet" href="./styles.css">
-    <script src="./calc.js"></script>
+    <script src="./calc.js" defer></script>
 </head>
 <body>
    <div class="Calculator">
-       <div class="displayer"><h1>0</h1></div>
+       <div class="displayer">
+           <h3 class="current-operator"></h3>
+           <h1 class="current-number"></h1>
+        </div>
        <div class="Pad">
            <div class="row" id="row0">
-               <button class="cell special-function">AC</button>
+               <button class="cell special-function ac">AC</button>
                <button class="cell special-function">Back</button>
            </div>
            <div class="row" id="row1">
@@ -36,8 +39,10 @@
            </div>
            <div class="row" id="row4">
                <button class="cell number">0</button>
-               <button class="cell number">.</button>
-               <button class="cell operator">=</button>
+               <button class="cell decimal">.</button>
+               <button class="cell equal">=</button>
+               <button class="cell operator">/</button>
+               
            </div>
        </div>
    </div> 
