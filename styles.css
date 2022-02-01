@@ -1,0 +1,56 @@
+body{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+.Calculator{
+    display:flex;
+    width: 300px;
+    height:400px;
+    flex-direction: column;
+    border: 5px solid black;
+}
+.displayer{
+    height:50px;
+    background-color: lightgrey;
+    color:black;
+    padding:5px;
+    display:flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+h1{
+    margin:0;
+    padding:0;
+}
+.Pad{
+    flex:1;
+    display:flex;
+    flex-direction: column;
+}
+.row{
+    flex:1;
+    display:flex;
+    border: 2px solid black;
+}
+.cell{
+    width:75px;    
+    border:2px solid black;
+}
+.number{
+    background-color: lightblue;
+}
+.special-function{
+    background-color: lightgreen;
+}
+.operator{
+    background-color: lightyellow;
+}
+#row4{
+    justify-content: flex-end;
+    background-color: lightblue;
+}
+#row0{
+    flex:0.5;
+    background-color: lightgreen;
+}
