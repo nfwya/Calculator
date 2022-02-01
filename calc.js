@@ -81,10 +81,12 @@ const clickHandler = function(){
        operator.textContent = this.textContent;
     }
     else if(this.classList.contains('equal')){
-        const newNumber = evaluate(operator.textContent, bufferNumber, currentNumber);
-        display.textContent = newNumber;
-        bufferNumber = undefined;
-        operator.textContent = '';
+        if(bufferNumber !== undefined){
+            const newNumber = evaluate(operator.textContent, bufferNumber, currentNumber);
+            display.textContent = newNumber;
+            bufferNumber = undefined;
+            operator.textContent = '';
+        }
     }
     else if(this.classList.contains('back')){
         backspace();
